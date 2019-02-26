@@ -34,6 +34,10 @@ def sigmoid(x):
     s = 1/(1+np.exp(-x))
     return s
 
+def tanh(x):
+    s = (np.exp(x)-np.exp(-x))/(np.exp(x)+np.exp(-x))
+    return s
+
 def load_planar_dataset():
     np.random.seed(1)
     m = 400 # number of examples
