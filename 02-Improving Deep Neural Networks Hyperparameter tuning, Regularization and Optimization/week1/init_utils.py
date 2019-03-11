@@ -230,7 +230,7 @@ def predict_dec(parameters, X):
     """
     
     # Predict using forward propagation and a classification threshold of 0.5
-    a3, cache = forward_propagation(X, parameters)
+    a3, cache = forward_propagation(X.T, parameters)
     predictions = (a3>0.5)
     return predictions
 
