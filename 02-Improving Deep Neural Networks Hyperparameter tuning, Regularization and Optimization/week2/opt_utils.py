@@ -125,7 +125,7 @@ def forward_propagation(X, parameters):
     b3 = parameters["b3"]
     
     # LINEAR -> RELU -> LINEAR -> RELU -> LINEAR -> SIGMOID
-    z1 = np.dot(W1, X) + b1
+    z1 = np.dot(W1.T, X) + b1
     a1 = relu(z1)
     z2 = np.dot(W2, a1) + b2
     a2 = relu(z2)
